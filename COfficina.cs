@@ -31,7 +31,7 @@ namespace Gestionale
             nomeOfficina = nomeofficina;
         }
 
-        string Descrizione()
+        public string Descrizione()
         {
             return $"Il nome dell'officina è: {nomeOfficina}";
         }
