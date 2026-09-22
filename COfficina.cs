@@ -27,29 +27,34 @@ namespace Gestionale
 
         public CMeccanici[] m
         {
-            get => m;
+            get => _m;
             private set
             {
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Il nome del meccanico non può essere vuoto");
-                }
-
-                m = value;
+                _m = value;
             }
         }
 
-        public COfficina() : this("SCONOSCIUTO", "SCONOSCIUTO", "SCONOSCIUTA") {}
+        public COfficina() : this("SCONOSCIUTO")
+        {
+            
+        }
 
-        public COfficina(string nomeofficina, string nome, string specializzazione)
+        public COfficina(string nomeofficina)
         {
             nomeOfficina = nomeofficina;
-            m = new CMeccanici(nome, specializzazione);
+            _m = new CMeccanici[0];
+
         }
 
         public string Descrizione()
         {
             return $"Il nome dell'officina è: {nomeOfficina}";
         }
+
+        public void AggiungiMeccanico(CMeccanici meccanico)
+        {
+            Array.Resize(ref _m, _m.Length+1);
+            _m[_m.Length-1] = meccanico;
+        } 
     }
 }
