@@ -8,6 +8,7 @@ namespace Gestionale
         private string _cognome;
         private int _telefono;
 
+
         public string Nome
         {
             get => _nome;
