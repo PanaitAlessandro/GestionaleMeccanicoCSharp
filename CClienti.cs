@@ -43,7 +43,7 @@ namespace Gestionale
             }
         }
 
-        public CClienti(): this ("SCONOSCIUTO", "SCONOSCIUTO", "SCONOSCIUTO") {}
+        public CClienti(): this ("SCONOSCIUTO", "SCONOSCIUTO", 0) {}
 
         public CClienti(string nome, string cognome, int telefono)
         {

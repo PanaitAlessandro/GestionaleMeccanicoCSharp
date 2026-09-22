@@ -8,6 +8,7 @@ namespace Gestionale
     }
     public class COfficina : IDescrizione
     {
+        private CClienti[] _clienti;
         private string _nomeofficina;
         private CMeccanici[] _m;
 
@@ -43,6 +44,7 @@ namespace Gestionale
         {
             nomeOfficina = nomeofficina;
             _m = new CMeccanici[0];
+            _clienti = new CClienti[0];
 
         }
 
@@ -56,5 +58,11 @@ namespace Gestionale
             Array.Resize(ref _m, _m.Length+1);
             _m[_m.Length-1] = meccanico;
         } 
+
+        public void AggiungiCliente(CClienti cliente)
+        {
+            Array.Resize(ref _clienti, _clienti.Length+1);
+            _clienti[_clienti.Length-1] = cliente;
+        }
     }
 }
