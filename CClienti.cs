@@ -8,6 +8,8 @@ namespace Gestionale
         private string _cognome;
         private int _telefono;
 
+        private CVeicolo[] _v;
+
 
         public string Nome
         {
@@ -51,6 +53,14 @@ namespace Gestionale
             Nome = nome;
             Cognome = cognome;
             Telefono = telefono;
+            _v = new CVeicolo[0];
+        }
+
+        public void AggiungiVeicolo(CVeicolo veicolo)
+        {
+            Array.Resize(ref _v, _v.Length+1);
+            _v[_v.Length-1] = veicolo;
+            
         }
 
         public override string ToString()
