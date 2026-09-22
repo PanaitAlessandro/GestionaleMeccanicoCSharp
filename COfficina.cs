@@ -9,6 +9,7 @@ namespace Gestionale
     public class COfficina : IDescrizione
     {
         private string _nomeofficina;
+        private CMeccanici[] _m;
 
         public string nomeOfficina
         {
@@ -24,11 +25,26 @@ namespace Gestionale
             }
         }
 
-        public COfficina() : this("SCONOSCIUTO") {}
+        public CMeccanici[] m
+        {
+            get => m;
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Il nome del meccanico non può essere vuoto");
+                }
 
-        public COfficina(string nomeofficina)
+                m = value;
+            }
+        }
+
+        public COfficina() : this("SCONOSCIUTO", "SCONOSCIUTO", "SCONOSCIUTA") {}
+
+        public COfficina(string nomeofficina, string nome, string specializzazione)
         {
             nomeOfficina = nomeofficina;
+            m = new CMeccanici(nome, specializzazione);
         }
 
         public string Descrizione()
