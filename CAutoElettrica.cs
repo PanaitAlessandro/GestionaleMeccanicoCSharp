@@ -28,6 +28,11 @@ namespace Gestionale
         {
             Autonomia = autonomia;
         }
-        
+
+
+        public override string ToString()
+        {
+            return $"Autonomia: {Autonomia}, [Auto: {base.ToString()}]";
+        }
     }
 }
