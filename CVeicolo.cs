@@ -67,5 +67,10 @@ namespace Gestionale
             Modello = modello;
             Chilometraggio = chilometraggio;
         }
+
+        public override string ToString()
+        {
+            return $"Targa: {Targa}, Marca: {Marca}, Modello: {Modello}, Chilometraggio: {Chilometraggio}";
+        }
     }
 }
