@@ -21,7 +21,12 @@ namespace Gestionale
             }
         }
 
-        public CAutoElettrica() : this() {
+        public CAutoElettrica() : this(100,4,"SCONOSCIUTA", "N/A", "SCONOSCIUTI", 0) {
+        }
+
+        public CAutoElettrica(int autonomia,int numeroporte, string targa, string marca, string modello, int chilometraggio ) : base(numeroporte,targa,marca,modello,chilometraggio)
+        {
+            Autonomia = autonomia;
         }
         
     }
