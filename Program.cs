@@ -34,6 +34,18 @@ namespace Gestionale
 
             CMeccanici meccanico = new CMeccanici("Carlo", "Moto");
 
+            cliente.AggiungiVeicolo(moto);
+            cliente2.AggiungiCliente(auto);
+            cliente3.AggiungiCliente(autoel);
+            
+            officina.AggiungiCliente(cliente);
+            officina.AggiungiCliente(cliente2);
+            officina.AggiungiCliente(cliente3);
+            officina.AggiungiMeccanico(meccanico);
+
+
+
+
             CInterventi intervento = new CInterventi(DateTime.Now, "Rottura del parabrezza", meccanico);
 
             moto.AggiungiIntervento(intervento);
