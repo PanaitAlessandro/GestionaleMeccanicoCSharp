@@ -57,7 +57,7 @@ namespace Gestionale
         {
             if (meccanico == null)
             {
-                throw new ArgumentException("Il cliente non può essere null");
+                throw new ArgumentException("Il meccanico non può essere null");
             }
 
             for (int i = 0; i < _m.Length; i++)
@@ -76,7 +76,7 @@ namespace Gestionale
 
             if (cliente == null)
             {
-                throw new ArgumentException("Il meccanico non può essere null");
+                throw new ArgumentException("Il cliente non può essere null");
             }
              for (int i = 0; i < _clienti.Length; i++)
              {
