@@ -9,6 +9,7 @@ namespace Gestionale
         private string _marca;
         private string _modello;
         private int _chilometraggio;
+        private CInterventi[] _interventi;
 
         public string Targa
         {
