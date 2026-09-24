@@ -3,7 +3,7 @@ using System;
 namespace Gestionale
 {
     
-    public override class CMoto : CVeicolo
+    public class CMoto : CVeicolo
     {
         private int _cilindrata;
 

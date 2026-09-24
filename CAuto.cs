@@ -1,7 +1,7 @@
 using System;
 namespace Gestionale
 {
-    public override class CAuto : CVeicolo
+    public class CAuto : CVeicolo
     {
         private int _numeroPorte;
 

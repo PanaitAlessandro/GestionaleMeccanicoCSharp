@@ -3,7 +3,7 @@ using System;
 namespace Gestionale
 {
     
-    public abstract class CAutoElettrica : CAuto
+    public class CAutoElettrica : CAuto
     {
 
         private int _autonomia;
