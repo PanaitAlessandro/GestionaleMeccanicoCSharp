@@ -2,7 +2,7 @@ using System;
 
 namespace Gestionale
 {
-    public class CVeicolo
+    public abstract class CVeicolo
     {
         //  targa, marca, modello, chilometraggio
         private string _targa;
@@ -75,6 +75,8 @@ namespace Gestionale
             Array.Resize(ref _interventi, _interventi.Length+1);
             _interventi[_interventi.Length-1] = intervento; 
         }
+
+        public abstract decimal CalcolaCostoTagliando();
 
         public override string ToString()
         {
