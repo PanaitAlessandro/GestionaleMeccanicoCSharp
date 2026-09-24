@@ -1,7 +1,7 @@
 using System;
 namespace Gestionale
 {
-    public class CAuto : CVeicolo
+    public override class CAuto : CVeicolo
     {
         private int _numeroPorte;
 
@@ -30,6 +30,19 @@ namespace Gestionale
         {
 
             numeroPorte = numeroporte;
+        }
+
+        public override decimal CalcolaCostoTagliando()
+        {
+            // facciamo cosi:
+            // numero Porte * 20
+            // chilometraggio / 500
+            // + il prezzo di base di 100
+            int prezzoBase = 0;
+            prezzoBase += numeroPorte*20;
+            prezzoBase += Chilometraggio / 500;
+
+            return prezzoBase;
         }
 
         public override string ToString()
