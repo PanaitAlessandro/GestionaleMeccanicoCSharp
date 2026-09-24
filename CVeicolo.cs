@@ -67,6 +67,7 @@ namespace Gestionale
             Marca = marca;
             Modello = modello;
             Chilometraggio = chilometraggio;
+            _interventi = new CInterventi[0];
         }
 
         public override string ToString()
