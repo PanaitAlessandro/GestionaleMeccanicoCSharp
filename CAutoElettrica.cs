@@ -3,7 +3,7 @@ using System;
 namespace Gestionale
 {
     
-    public class CAutoElettrica : CAuto
+    public abstract class CAutoElettrica : CAuto
     {
 
         private int _autonomia;
@@ -29,6 +29,18 @@ namespace Gestionale
             Autonomia = autonomia;
         }
 
+        public override decimal CalcolaCostoTagliando()
+        {
+            // facciamo cosi:
+            // autonomia *1
+            // chilometraggio / 500
+            // + il prezzo di base di 100
+            int prezzoBase = 100;
+            prezzoBase += Autonomia;
+            prezzoBase += Chilometraggio / 500;
+
+            return prezzoBase;
+        }
 
         public override string ToString()
         {
