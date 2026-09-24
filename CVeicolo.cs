@@ -70,6 +70,12 @@ namespace Gestionale
             _interventi = new CInterventi[0];
         }
 
+        public void AggiungiIntervento(CInterventi intervento)
+        {
+            Array.Resize(ref _interventi, _interventi.Length+1);
+            _interventi[_interventi.Length-1] = intervento; 
+        }
+
         public override string ToString()
         {
             return $"Targa: {Targa}, Marca: {Marca}, Modello: {Modello}, Chilometraggio: {Chilometraggio}";
