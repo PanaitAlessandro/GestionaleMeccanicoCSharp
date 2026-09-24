@@ -50,7 +50,7 @@ namespace Gestionale
         public decimal costoFinale
         {
             get => _costoFinale;
-            private set
+            set
             {
                 if (value < 0)
                 {
@@ -63,7 +63,7 @@ namespace Gestionale
         public bool isInterventoChiuso
         {
             get => _isInterventoChiuso;
-            private set
+            set
             {
                 _isInterventoChiuso = value;
             }
