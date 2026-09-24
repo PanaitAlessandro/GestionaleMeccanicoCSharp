@@ -55,5 +55,10 @@ namespace Gestionale
                 _isInterventoChiuso = value;
             }
         }
+
+        public override string ToString()
+        {
+            return $"Sezione Interventi\n Data: {Data},Descrizione Problema: {Descrizione}, CostoFinale: {costoFinale}, Stato Intervento: {isInterventoChiuso}, Meccanico: {_meccanico.ToString()}";
+        }
     }
 }
