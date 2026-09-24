@@ -72,6 +72,17 @@ namespace Gestionale
 
         public void AggiungiIntervento(CInterventi intervento)
         {
+            if (intervento == null)
+            {
+                throw new ArgumentException("L'intervento non può essere null");
+            }
+             for (int i = 0; i < _interventi.Length; i++)
+             {
+                if (_interventi[i] == intervento)
+                {
+                    throw new InvalidOperationException("Questo intervento è già presente");
+                }
+            } 
             Array.Resize(ref _interventi, _interventi.Length+1);
             _interventi[_interventi.Length-1] = intervento; 
         }
