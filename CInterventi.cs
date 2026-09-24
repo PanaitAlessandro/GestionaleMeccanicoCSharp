@@ -56,16 +56,15 @@ namespace Gestionale
             }
         }
 
-        public CInterventi() : this(DateTime.Now, "SCONOSCIUTA", 0, false,"SCONOSCIUTO", "SCONOSCIUTA") {}
+        public CInterventi() : this(DateTime.Now, "SCONOSCIUTA", 0, false, new CMeccanici()) {}
 
-        public CInterventi(DateTime data, string descrizione, decimal costofinale, bool interventochiuso, string nome, string specializzazione)
+        public CInterventi(DateTime data, string descrizione, decimal costofinale, bool interventochiuso, CMeccanici meccanico)
         {
             Data = data;
             Descrizione = descrizione;
             costoFinale = costofinale;
             isInterventoChiuso = interventochiuso;
-            _meccanico = new CMeccanici(nome,specializzazione);
-            _meccanico = new CMeccanici[0];
+            _meccanico = meccanico;
 
         }
 
