@@ -79,6 +79,17 @@ namespace Gestionale
 
         }
 
+        public void ChiudiIntervento(decimal costo)
+        {
+            if (isInterventoChiuso == true)
+            {
+                throw new InvalidOperationException("L'intervento è già chiuso!");
+            }
+            costoFinale = costo;
+            System.Console.WriteLine($"L'intervento costa: {costoFinale}, ed è stato chiuso con successo!");
+            isInterventoChiuso = true;
+        }
+
         public override string ToString()
         {
             return $"Sezione Interventi\n Data: {Data},Descrizione Problema: {Descrizione}, CostoFinale: {costoFinale}, Stato Intervento: {isInterventoChiuso}, Meccanico: {_meccanico.ToString()}";
