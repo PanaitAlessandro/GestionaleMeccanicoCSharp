@@ -56,7 +56,7 @@ namespace Gestionale
             }
         }
 
-        public CInterventi() : this() {}
+        public CInterventi() : this(DateTime.Now, "SCONOSCIUTA", 0, false,"SCONOSCIUTO", "SCONOSCIUTA") {}
 
         public CInterventi(DateTime data, string descrizione, decimal costofinale, bool interventochiuso, string nome, string specializzazione)
         {
