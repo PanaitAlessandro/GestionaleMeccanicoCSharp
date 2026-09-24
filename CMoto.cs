@@ -3,7 +3,7 @@ using System;
 namespace Gestionale
 {
     
-    public class CMoto : CVeicolo
+    public override class CMoto : CVeicolo
     {
         private int _cilindrata;
 
@@ -27,6 +27,19 @@ namespace Gestionale
         {
             Cilindrata = cilindrata;
 
+        }
+
+        public override decimal CalcolaCostoTagliando()
+        {
+            // facciamo cosi:
+            // cilindrata *1
+            // chilometraggio / 500
+            // + il prezzo di base di 100
+            int prezzoBase = 100;
+            prezzoBase += Cilindrata;
+            prezzoBase += Chilometraggio / 500;
+
+            return prezzoBase;
         }
 
         public override string ToString()

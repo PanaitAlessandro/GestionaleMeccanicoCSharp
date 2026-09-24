@@ -38,7 +38,7 @@ namespace Gestionale
             // numero Porte * 20
             // chilometraggio / 500
             // + il prezzo di base di 100
-            int prezzoBase = 0;
+            int prezzoBase = 100;
             prezzoBase += numeroPorte*20;
             prezzoBase += Chilometraggio / 500;
 
