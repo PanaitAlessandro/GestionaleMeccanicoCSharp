@@ -4,13 +4,13 @@ namespace Gestionale
 {
     public class CInterventi
     {
-        private CVeicolo[] _veicoli;
-        private CMeccanici[] _meccanici;
+        private CVeicolo _veicolo;
+        private CMeccanici _meccanico;
 
         private string _data;
         private string _descrizione;
         private decimal _costoFinale;
 
-        
+
     }
 }
