@@ -56,6 +56,18 @@ namespace Gestionale
             }
         }
 
+        public CInterventi() : this() {}
+
+        public CInterventi(DateTime data, string descrizione, decimal costofinale, bool interventochiuso, string nome, string specializzazione)
+        {
+            Data = data;
+            Descrizione = descrizione;
+            costoFinale = costofinale;
+            isInterventoChiuso = interventochiuso;
+            _meccanico = new CMeccanici(nome,specializzazione);
+
+        }
+
         public override string ToString()
         {
             return $"Sezione Interventi\n Data: {Data},Descrizione Problema: {Descrizione}, CostoFinale: {costoFinale}, Stato Intervento: {isInterventoChiuso}, Meccanico: {_meccanico.ToString()}";
