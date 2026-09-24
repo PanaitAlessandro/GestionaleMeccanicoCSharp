@@ -64,5 +64,21 @@ namespace Gestionale
             Array.Resize(ref _clienti, _clienti.Length+1);
             _clienti[_clienti.Length-1] = cliente;
         }
+
+        public bool CercaVeicolo(string targa)
+        {
+           for (int i = 0; i < _clienti.Length; i++)
+            {
+                if(_clienti[i].CercaVeicolo(targa) == targa)
+                {
+                    System.Console.WriteLine("trovato!");
+                    return true;
+                }
+                return false;
+            }
+        }
+
     }
+
+    
 }

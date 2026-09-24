@@ -35,9 +35,9 @@ namespace Gestionale
             CMeccanici meccanico = new CMeccanici("Carlo", "Moto");
 
             cliente.AggiungiVeicolo(moto);
-            cliente2.AggiungiCliente(auto);
-            cliente3.AggiungiCliente(autoel);
-            
+            cliente2.AggiungiVeicolo(auto);
+            cliente3.AggiungiVeicolo(autoel);
+
             officina.AggiungiCliente(cliente);
             officina.AggiungiCliente(cliente2);
             officina.AggiungiCliente(cliente3);

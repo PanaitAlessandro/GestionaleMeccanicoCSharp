@@ -63,6 +63,19 @@ namespace Gestionale
             
         }
 
+        public bool CercaVeicolo(string targa)
+        {
+            for (int i = 0; i < _v.Length; i++)
+            {
+                if (_v[i].Targa == targa)
+                {
+                    System.Console.WriteLine($"Targa trovata: {_v[i]}");
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public override string ToString()
         {
             return $"Cliente: (Nome: {Nome}, Cognome: {Cognome}, N. Telefono: {Telefono})";
