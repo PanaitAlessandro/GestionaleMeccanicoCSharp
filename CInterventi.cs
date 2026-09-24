@@ -50,7 +50,10 @@ namespace Gestionale
         public bool isInterventoChiuso
         {
             get => _isInterventoChiuso;
-            private set {}
+            private set
+            {
+                _isInterventoChiuso = value;
+            }
         }
     }
 }
