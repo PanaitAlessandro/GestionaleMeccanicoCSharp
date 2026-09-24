@@ -6,7 +6,7 @@ namespace Gestionale
     {
         private string _nome;
         private string _cognome;
-        private int _telefono;
+        private string _telefono;
 
         private CVeicolo[] _v;
 
@@ -37,7 +37,7 @@ namespace Gestionale
             }
         }
 
-        public int Telefono
+        public string Telefono
         {
             get => _telefono;
             private set
@@ -46,9 +46,9 @@ namespace Gestionale
             }
         }
 
-        public CClienti(): this ("SCONOSCIUTO", "SCONOSCIUTO", 0) {}
+        public CClienti(): this ("SCONOSCIUTO", "SCONOSCIUTO", "+39 0") {}
 
-        public CClienti(string nome, string cognome, int telefono)
+        public CClienti(string nome, string cognome, string telefono)
         {
             Nome = nome;
             Cognome = cognome;
