@@ -21,7 +21,24 @@ namespace Gestionale
                 System.Console.WriteLine(c);
             }
 
-            
+            CAuto auto = new CAuto(4,"ABDCDDE", "TOYOTA", "MODEL S", 4000);
+            CMoto moto = new CMoto(200,"SJCIOES", "TOYOTA", "MODEL Z", 40000);
+            CAutoElettrica autoel = new CAutoElettrica(200,4,"EOPSPANE", "TOYOTA", "MODEL Y", 40);
+
+            CVeicolo[] veicoli = {auto, moto, autoel};
+
+            foreach (CVeicolo v in veicoli)
+            {
+                System.Console.WriteLine(v);
+            }
+
+            CMeccanici meccanico = new CMeccanici("Carlo", "Moto");
+
+            CInterventi intervento = new CInterventi(DateTime.Now, "Rottura del parabrezza", meccanico);
+
+            moto.AggiungiIntervento(intervento);
+
+            intervento.ChiudiIntervento(500);
         }
     }
 }
