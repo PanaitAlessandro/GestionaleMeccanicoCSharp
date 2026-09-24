@@ -21,6 +21,19 @@ namespace Gestionale
             }
         }
 
+        public CMeccanici Meccanico
+        {
+            get => _meccanico;
+            private set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentException("Un meccanico non può essere 'null'");
+                }
+                _meccanico = value;
+            }
+        }
+
         public string Descrizione
         {
             get => _descrizione;
@@ -56,15 +69,13 @@ namespace Gestionale
             }
         }
 
-        public CInterventi() : this(DateTime.Now, "SCONOSCIUTA", 0, false, new CMeccanici()) {}
+        public CInterventi() : this(DateTime.Now, "SCONOSCIUTA", new CMeccanici()) {}
 
-        public CInterventi(DateTime data, string descrizione, decimal costofinale, bool interventochiuso, CMeccanici meccanico)
+        public CInterventi(DateTime data, string descrizione,  CMeccanici meccanico)
         {
             Data = data;
             Descrizione = descrizione;
-            costoFinale = costofinale;
-            isInterventoChiuso = interventochiuso;
-            _meccanico = meccanico;
+            Meccanico = meccanico;
 
         }
 
