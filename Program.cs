@@ -43,6 +43,10 @@ namespace Gestionale
             officina.AggiungiCliente(cliente3);
             officina.AggiungiMeccanico(meccanico);
 
+            officina.CercaVeicolo(moto.Targa);
+
+            cliente.CercaVeicolo(moto.Targa);
+
 
 
 

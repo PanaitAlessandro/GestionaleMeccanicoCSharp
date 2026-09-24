@@ -69,13 +69,13 @@ namespace Gestionale
         {
            for (int i = 0; i < _clienti.Length; i++)
             {
-                if(_clienti[i].CercaVeicolo(targa) == targa)
+                if(_clienti[i].CercaVeicolo(targa))
                 {
-                    System.Console.WriteLine("trovato!");
                     return true;
                 }
-                return false;
             }
+            System.Console.WriteLine("Targa non trovata");
+            return false;
         }
 
     }
