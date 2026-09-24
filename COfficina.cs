@@ -55,12 +55,37 @@ namespace Gestionale
 
         public void AggiungiMeccanico(CMeccanici meccanico)
         {
+            if (meccanico == null)
+            {
+                throw new ArgumentException("Il cliente non può essere null");
+            }
+
+            for (int i = 0; i < _m.Length; i++)
+            {
+                if (_m[i] == meccanico)
+                {
+                    throw new ArgumentException("Questo meccanico è già presente in officina");
+                }
+            }
             Array.Resize(ref _m, _m.Length+1);
             _m[_m.Length-1] = meccanico;
         } 
 
         public void AggiungiCliente(CClienti cliente)
         {
+
+            if (cliente == null)
+            {
+                throw new ArgumentException("Il meccanico non può essere null");
+            }
+             for (int i = 0; i < _clienti.Length; i++)
+             {
+                if (_clienti[i] == cliente)
+                {
+                    throw new InvalidOperationException("Questo cliente è già presente in officina");
+                }
+            } 
+
             Array.Resize(ref _clienti, _clienti.Length+1);
             _clienti[_clienti.Length-1] = cliente;
         }
