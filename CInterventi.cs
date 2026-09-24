@@ -65,6 +65,7 @@ namespace Gestionale
             costoFinale = costofinale;
             isInterventoChiuso = interventochiuso;
             _meccanico = new CMeccanici(nome,specializzazione);
+            _meccanico = new CMeccanici[0];
 
         }
 
